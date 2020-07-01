@@ -30,39 +30,41 @@
 
 
 	<main id="main" class="site-main">
-	    <header class="virtuclean-header <?php if (!is_front_page()) {
-	    echo 'page_bg';
-	} ?>">
-		<?php
-		$top_popaps = get_field('top_popaps', 'option');
-		?>
+	    <header class="virtuclean-header <?php
+	    if (!is_front_page()) {
+		echo 'page_bg';
+	    }
+	    ?>">
+			<?php
+			$top_popaps = get_field('top_popaps', 'option');
+			?>
 		<div class="save-popap-top">
 		    <span class="close-popap"><i class="fas fa-times"></i></span>
 		    <!--<a class="btn_link" href="">RESELLER ENQUIRIES</a>-->
 		    <div class="desctop">
-<?php echo $top_popaps['content_desctop']; ?>
+			<?php echo $top_popaps['content_desctop']; ?>
 		    </div>
 		    <div class="mobile">
-		    <?php echo $top_popaps['mobile_content']; ?>
+			<?php echo $top_popaps['mobile_content']; ?>
 		    </div>
 		    <?php
 		    $id_product = get_field('main_product', 'options');
 		    if (isset($id_product)) :
 			?>
     		    <a href="<?php echo home_url('/checkout/?add-to-cart=' . $id_product . '&quantity=1'); ?>"><?php echo get_field('header_name_bottom', 'option'); ?></a>
-<?php endif; ?>
+		    <?php endif; ?>
 		</div>
 		<nav class="header-container" role="navigation">
 		    <div class="logo">
 			<a href="<?php echo esc_url(home_url('/')); ?>" title="<?php echo esc_attr(get_bloginfo('name', 'display')); ?>" rel="home">
-			    <img src="<?php echo get_field('image_logo', 'option'); ?>" alt="Logo" width="180px" height="41px" class="virtuclean-logo-img"/>
+			    <img src="<?php echo get_field('image_logo', 'option'); ?>" alt="Logo" class="virtuclean-logo-img"/>
 			</a>
 		    </div>
 
 		    <div class="head_righ">
 			<!--				<div class="old-version">-->
 			<!--					<span>Old version</span>-->
-			<!--					<a href="--><?php //echo get_field('link_old_version','option'); ?><!--" target="_blank"><span>--><?php //echo get_field('title_old_header','option'); ?><!--</span> --><?php //echo get_field('name_product_header','option'); ?><!--</a>-->
+			<!--					<a href="--><?php //echo get_field('link_old_version','option');              ?><!--" target="_blank"><span>--><?php //echo get_field('title_old_header','option');              ?><!--</span> --><?php //echo get_field('name_product_header','option');              ?><!--</a>-->
 			<!--				</div>-->
 			<div class="head-lang">
 			    <a href="#site_type" class="site_type" style="margin-right: 7px;">
@@ -73,7 +75,13 @@
 			    </a>
 			</div>
 			<div class="header-phone">
-			    <a href="tel:<?php echo get_field('number_phone', 'option'); ?>"><?php echo get_field('number_phone', 'option'); ?></a>
+			    <?php
+			    $search = array(' ', '(', ')', '-');
+			    $replace = array('');
+			    $subject = get_field('number_phone', 'option');
+			    $tel_href = str_replace($search, $replace, $subject);
+			    ?>
+			    <a href="tel:<?php echo $tel_href; ?>"><?php echo get_field('number_phone', 'option'); ?></a>
 			</div>
 			<div class="head-get-in-touch">
 			    <?php
@@ -81,7 +89,7 @@
 			    if (isset($id_product)) :
 				?>
     			    <a href="<?php echo home_url('/checkout/?add-to-cart=' . $id_product . '&quantity=1'); ?>" class="btn_get_in_touch"><?php echo get_field('header_name_bottom', 'option'); ?></a>
-<?php endif; ?>
+			    <?php endif; ?>
 			</div>
 			<div class="head-mobile">
 			    <span>menu</span>
@@ -102,13 +110,13 @@
 			    while ($loop->have_posts()) : $loop->the_post();
 				global $product;
 				?>
-	                        <div class="pp_mobile_all__content">
-	                            <h2><?php echo get_the_title() ?></h2>
-	                            <p class="price">
-	                                Only <span class="price-currencySymbol"><?php echo get_woocommerce_currency_symbol(); ?></span>
-	                                <span class="price_numb"><?php echo $product->get_price(); ?></span>
-	                            </p>
-	                        </div>
+				<div class="pp_mobile_all__content">
+				    <h2><?php echo get_the_title() ?></h2>
+				    <p class="price">
+					Only <span class="price-currencySymbol"><?php echo get_woocommerce_currency_symbol(); ?></span>
+					<span class="price_numb"><?php echo $product->get_price(); ?></span>
+				    </p>
+				</div>
 				<?php
 			    endwhile;
 			    wp_reset_query();
@@ -119,7 +127,7 @@
 
 			<a class="a-cart"  href="<?php echo wc_get_cart_url(); ?>">
 			    <div class="cart-contents" >
-				<img src="<?php echo get_template_directory_uri(); ?>/../../uploads/2019/05/shopping-bag.png" alt="Logo" width="21px" height="25px" class="virtuclean-logo-img"/>
+				<img src="<?php echo get_template_directory_uri(); ?>/../../uploads/2019/05/shopping-bag.png" alt="Cart" class="virtuclean-cart-img"/>
 				<span class="header-cart-count">0</span>
 			    </div>
 			</a>
@@ -144,7 +152,7 @@
 			    </a>
 			</div>
 			<div class="header-phone">
-			    <a style="padding: 0;" href="tel:<?php echo get_field('number_phone', 'option'); ?>"><?php echo get_field('number_phone', 'option'); ?></a>
+			    <a style="padding: 0;" href="tel:<?php echo $tel_href; ?>"><?php echo get_field('number_phone', 'option'); ?></a>
 			</div>
 		    </div>
 		</div>
