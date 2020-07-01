@@ -308,9 +308,9 @@ $advantages_h = get_field('advantages_virtuclean');
 				<div class="col-lg-3 col-md-12 recent_reviews_image">
 				    <img src="<?php echo $photo['url']; ?>" alt="<?php echo $photo['alt']; ?>">
 				    <span class="reviews_autor"><?php echo $autor; ?></span>
-				    <time>
+				    <span class="time">
 					<?php echo $date; ?>
-				    </time>
+				    </span>
 				</div>
 				<div class="col-lg-9 col-md-12 recent_reviews_content">
 				    <p><?php echo $content; ?></p>
