@@ -37,7 +37,7 @@ function rst_load_assets() {
 	// Scripts
 	wp_enqueue_script('owl-carousel', get_template_directory_uri() . '/assets/dist/vendor/owl.carousel.min.js', array('jquery'), VIRTUCLEAN_THEME_VERSION, true);
 	wp_enqueue_script('popap', get_template_directory_uri() . '/assets/dist/vendor/magnific-popup.min.js', array('jquery'), VIRTUCLEAN_THEME_VERSION, true);
-	wp_enqueue_script('sticky-sidebar', get_template_directory_uri() . '/assets/dist/vendor/jquery.sticky-sidebar.min.js', array('jquery'), VIRTUCLEAN_THEME_VERSION, true);
+	//wp_enqueue_script('sticky-sidebar', get_template_directory_uri() . '/assets/dist/vendor/jquery.sticky-sidebar.min.js', array('jquery'), VIRTUCLEAN_THEME_VERSION, true);
 	wp_enqueue_script('app', get_template_directory_uri() . '/assets/dist/js/app.min.js', array('jquery', 'owl-carousel'), VIRTUCLEAN_THEME_VERSION, true);
 	wp_enqueue_script('reseller-page', get_template_directory_uri() . '/assets/dist/js/main.js', array('jquery'), VIRTUCLEAN_THEME_VERSION, true);
 	wp_enqueue_script('slick-page', get_template_directory_uri() . '/assets/dist/js/slick.js', array('jquery'), VIRTUCLEAN_THEME_VERSION, true);
