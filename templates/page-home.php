@@ -149,9 +149,9 @@ $advantages_h = get_field('advantages_virtuclean');
     </div>
 </section>
 
-<center><div class="bansold">
-	<img src="https://www.virtuclean.com/wp-content/uploads/2019/11/banner-3-1.png" alt="">
-    </div></center>
+<div class="bansold text-center">
+    <img src="https://www.virtuclean.com/wp-content/uploads/2019/11/banner-3-1.png" alt="">
+</div>
 <section class="virtuclean_product_sec">
     <div class="container">
 	<div class="row">

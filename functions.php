@@ -273,7 +273,7 @@ function quantity_inputs_for_woocommerce_loop_add_to_cart_link($html, $product) 
     if ($product && $product->is_type('simple') && $product->is_purchasable() && $product->is_in_stock() && !$product->is_sold_individually()) {
 	$html = '<form action="' . esc_url($product->add_to_cart_url()) . '" class="cart" method="post" enctype="multipart/form-data">';
 	//$html .= '<div class="quantity_box"><span class="title">'.$label_quantity.'</span><div class="product_qty_custom"><div class="product_qty_symbol"><span class="product_qty_plus">+</span><span class="product_qty_minus">-</span></div>'.woocommerce_quantity_input( array(), $product, false ).'</div></div>';
-	$html .= '<div class="add_c_box"><button type="submit" class="button btn_add_to_cart"><img src="/wp-content/themes/virtuclean/../../uploads/2019/05/shopping-bag.png" alt="Logo" width="21px" height="25px" class="virtuclean-logo-img"></button></div>';
+	$html .= '<div class="add_c_box"><button type="submit" class="button btn_add_to_cart"><img src="/wp-content/themes/virtuclean/../../uploads/2019/05/shopping-bag.png" alt="add_to_cart" class="add-to-cart-img"></button></div>';
 	$html .= '</form>';
     }
     return $html;
