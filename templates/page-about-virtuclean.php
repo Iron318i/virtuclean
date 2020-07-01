@@ -217,10 +217,11 @@ get_header();
 		    <div class="recent_reviews home_reviews">
 			<div class="recent_reviews_slider">
 
-			    <section class="prod_ban">
+			    <div class="prod_ban">
 				<div class="prodbanner">
 				    <img src="https://www.virtuclean.com/wp-content/uploads/2019/12/prodbanner.png" alt="">
-				</div> </section>
+				</div>
+			    </div>
 			    <h2><?php echo get_field('title_reviews_all', 'option'); ?></h2>
 			    <div class="recent_reviews_owl owl-carousel owl-theme">
 				<?php
@@ -254,6 +255,7 @@ get_header();
 		    </div>
 		</div>
 	    </div>
+	</div>
     </section>
     <?php get_template_part('template-parts/form', 'question'); ?>
 </div>
