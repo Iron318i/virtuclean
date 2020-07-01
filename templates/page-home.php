@@ -205,7 +205,7 @@ $advantages_h = get_field('advantages_virtuclean');
 			    <h2><?php echo get_the_title() ?></h2>
 			</div>
 			<div class="descr">
-			    <p><?php echo $product->get_short_description(); ?></p>
+			    <?php echo $product->get_short_description(); ?>
 			    <a class="more-info" href="<?php echo get_permalink() ?>"><?php echo get_field('title_link_product_all', 'option'); ?></a>
 			</div>
 			<div class="block-inf-pr">
