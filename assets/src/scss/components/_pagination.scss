@@ -1,0 +1,79 @@
+.pagination {
+    height: 61px;
+    background-color: #F3F3F3;
+
+    h2 {
+        display: none;
+    }
+
+    .nav-links {
+    	position: relative;
+        height: 100%;
+		width: 100%;
+        color: #333333;
+        font-weight: 700;
+        font-size: 18px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        @include flex;
+
+        a {
+        	color: #333333;
+
+        	&:hover {
+        		color: #7EDAEE;
+              &:before, &:after{
+                color: #7EDAEE;
+              }
+        	}
+            span{
+              @media (max-width: 768px){
+                display: none;
+              }
+            }
+        }
+
+        .current {
+        	color: #C4C4C4;
+        }
+
+        .page-numbers {
+        	padding: 0 10px;
+        }
+
+        .prev {
+        	position: absolute;
+        	left: 30px;
+        	top: 50%;
+        	transform: translateY(-50%);
+            &:before{
+              content: "\f053";
+              font-family: "Font Awesome 5 Free";
+              position: relative;
+              font-weight: 900;
+              top: 0px;
+              left: -5px;
+              color: #333333;
+              font-size: 18px;
+
+            }
+        }
+
+        .next {
+        	position: absolute;
+        	right: 30px;
+        	top: 50%;
+        	transform: translateY(-50%);
+            &:after{
+              content: "\f054";
+              font-family: "Font Awesome 5 Free";
+              position: relative;
+              font-weight: 900;
+              top: 0px;
+              left: 8px;
+              color: #333333;
+              font-size: 18px;
+            }
+        }
+    }
+}

@@ -1,0 +1,120 @@
+.hero {
+    //margin-top: 71px;
+    width: 100%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: linear-gradient(82.68deg, #2E363E 2.28%, rgba(0, 0, 0, 0) 93.3%);
+    color: #ffffff;
+    position: relative;
+
+    &.--large {
+        .container {
+            min-height: 670px;
+        }
+    }
+
+
+    >img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .container {
+        position: relative;
+        @include flex(column, center, flex-start);
+    }
+
+    &-breadcrumb {
+        margin: 0;
+        list-style: none;
+        padding: 16px 23px;
+        background-color: rgba(0, 0, 0, 0.5);
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 15px;
+        z-index: 1;
+
+        li {
+            display: inline-block;
+
+            &:last-child {
+                &:before {
+                    color: #C4C4C4 !important;
+                }
+
+                a {
+                    color: #C4C4C4
+                }
+            }
+
+            &:not(:first-child) {
+                &:before {
+                    content: '/';
+                    color: #ffffff;
+                    display: inline-block;
+                    margin: 0 5px;
+                }
+            }
+
+            a {
+                color: #ffffff;
+                font-weight: bold;
+                font-size: 12px;
+                letter-spacing: 0.05em;
+                font-family: 'Noto Sans Bold';
+            }
+        }
+    }
+
+    .content {
+        min-height: 341px;
+        padding: 85px 0;
+        @include flex(column, center, flex-start);
+        @media (max-width: 768px){
+            min-height: auto;
+            padding: 60px 0 20px;
+        }
+
+        blockquote {
+            margin: 0;
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            @include flex(row, flex-start);
+
+            &:before {
+                content: '';
+                display: inline-block;
+                height: 2px;
+                width: 65px;
+                background-color: #ffffff;
+                margin-right: 25px;
+            }
+        }
+
+        h1 {
+            font-weight: bold;
+            font-size: 48px;
+            line-height: 69px;
+            letter-spacing: 0.05em;
+            margin-bottom: 15px;
+            @media (max-width: 768px){
+                font-size: 28px;
+                line-height: 44px;
+            }
+
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+}

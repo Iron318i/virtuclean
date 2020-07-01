@@ -1,0 +1,17 @@
+.related {
+	padding-top: 45px;
+	
+    h2 {
+        font-family: Lato;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 69px;
+        letter-spacing: 0.05em;
+        color: #333333;
+        margin-bottom: 25px;
+        @media (max-width: 768px){
+            font-size: 38px;
+            line-height: 44px;
+        }
+    }
+}

@@ -1,0 +1,249 @@
+.page-template-page-about-us {
+
+    section {
+        form {
+            position: relative;
+        }
+
+        .wpcf7 {
+            width: 451px;
+            margin-top: 55px;
+            margin-bottom: 100px;
+            padding: 40px 45px;
+            -webkit-box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+            -moz-box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+
+            @media screen and (max-width: 576px) {
+                padding: 20px 15px;
+                margin-top: 0;
+            }
+
+            h2 {
+                @media screen and (max-width: 576px) {
+                    font-size: 2rem;
+                }
+
+                color: #7EDAEE;
+            }
+
+            textarea {
+                max-height: 140px;
+                width: 100%;
+            }
+        }
+
+        .wpcf7-response-output {
+            border: none;
+            color: red;
+            margin: 0;
+            padding: 0;
+            bottom: 75px;
+            font-size: .8em;
+            width: 100%;
+            text-align: center;
+        }
+
+        .form-wrapper {
+            background-color: #fff;
+            margin-top: 35px;
+
+            @media screen and (max-width: 992px) {
+                display: flex;
+                justify-content: center;
+            }
+
+            @media screen and (max-width: 576px) {
+                width: 100%;
+            }
+
+            .inner {
+                input {
+                    width: 100%;
+                    font-family: Noto Sans;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 37px;
+                    letter-spacing: 0.05em;
+                    color: #333333;
+                }
+
+                .form-group {
+                    position: relative;
+
+                    &+.form-group {
+                        margin-top: 30px;
+                    }
+
+                    &:after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        bottom: 0;
+                        width: 100%;
+                        height: 2px;
+                        background-color: #EAEAEA;
+                    }
+                }
+
+                .form-label {
+                    position: absolute;
+                    left: 0;
+                    top: 25px;
+                    color: #333;
+                    z-index: 10;
+                    transition: transform 150ms ease-out, font-size 150ms ease-out;
+                    user-select: unset;
+                }
+
+                .focused {
+                    .form-label {
+                        transform: translateY(-125%);
+                        font-size: .75em;
+                        color: #888;
+                    }
+
+                    &:after {
+                        background-color: #7EDAEE;
+                    }
+                }
+
+                .form-input {
+                    position: relative;
+                    padding: 12px 0 5px 0;
+                    width: 100%;
+                    outline: 0;
+                    border: 0;
+                    box-shadow: 0 1px 0 0 #e5e5e5;
+                    transition: box-shadow 150ms ease-out;
+
+                    &:focus {
+                        box-shadow: 0 2px 0 0 blue;
+                    }
+                }
+
+                .form-input.filled {
+                    box-shadow: 0 2px 0 0 lightgreen;
+                }
+            }
+
+            .send {
+                margin-top: 10px;
+                height: 69px;
+            }
+
+            input[type="submit"] {
+                background-color: #7EDAEE;
+                color: #fff;
+                font-family: Lato;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 20px;
+                text-align: center;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                width: 100%;
+                height: 69px;
+                border: none;
+            }
+        }
+    }
+
+    .row {
+        position: relative;
+    }
+
+    .breadcrumbs {
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background: rgba(0, 0, 0, 0.5);
+        color: #c4c4c4;
+        font-family: Noto Sans;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 53px;
+        letter-spacing: 0.05em;
+        padding: 0 19px;
+
+        & a {
+            color: #fff;
+        }
+
+        @media screen and (max-width: 576px) {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 1340px) and (min-width: 1200px) {
+        .col-xl-4 {
+            flex: 0 0 41.66666%;
+            max-width: 41.66666%;
+        }
+
+        .col-xl-8 {
+            flex: 0 0 58.33333%;
+            max-width: 58.33333%;
+        }
+    }
+
+    h2 {
+        letter-spacing: 4px;
+    }
+
+    .page-content {
+        margin-top: 55px;
+
+        h4 {
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+        }
+
+        p {
+            max-width: 900px;
+            line-height: 2rem;
+            font-size: 14px;
+            letter-spacing: 0.7px;
+            margin-bottom: 2rem;
+
+            img {
+                margin-top: 60px;
+                max-width: 100%;
+                width: auto;
+                height: auto;
+            }
+
+            &:last-child {
+                margin-bottom: 100px;
+
+                @media screen and (max-width: 992px) {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+
+        ul {
+            padding: 0;
+
+            li {
+                line-height: 2.5rem;
+                list-style: none;
+
+                &::before {
+                    margin-right: 1.5rem;
+                    content: " ";
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    transform: rotate(45deg);
+                    border: 3px solid #7EDAEE;
+                }
+            }
+        }
+    }
+}

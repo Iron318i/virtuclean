@@ -1,0 +1,172 @@
+.faq-page {
+	@media screen and (max-width: 769px) {
+		padding-bottom: 26rem;
+		background: #fff;
+	}
+
+	.question-form {
+		padding-top: 81px;
+		padding-bottom: 84px;
+
+		.form-wrapper {
+			margin-bottom: 0;
+		}
+	}
+
+	section {
+
+		h5.accordion-question {
+			display: block;
+			background: #F8F8F8;
+			color: #333333;
+			padding: 24px 33px 20px;
+			letter-spacing: 2px;
+			font-family: "Noto Sans";
+			font-weight: bold;
+		}
+
+		.ui-accordion {
+			.ui-accordion-header.ui-state-active {
+				background: #7EDAEE;
+				color: #fff;
+				border: none;
+				outline: none;
+
+				.ui-accordion-header-icon {
+					background: linear-gradient(to bottom right, #fff 0%, #fff 50%, #7EDAEE 50%, #7EDAEE 100%);
+					transform: rotate(45deg);
+					margin-top: -3px;
+				}
+			}
+
+			.ui-accordion-header {
+				border: none;
+
+				&:hover {
+					outline: none;
+					border: none;
+					outline-color: unset;
+					cursor: pointer;
+				}
+
+				&:focus {
+					outline: none;
+					border: none;
+					outline-color: unset;
+				}
+
+				.ui-accordion-header-icon {
+					right: 20px;
+					left: unset;
+					width: 15px;
+					height: 15px;
+					background: linear-gradient(to bottom right, #333333 0%, #333333 50%, #F8F8F8 50%, #F8F8F8 100%);
+					transform: rotate(225deg);
+				}
+			}
+		}
+
+		#accordion {
+			max-width: 950px;
+			margin: 0 auto 85px;
+
+			.accordion-unswer {
+				padding: 25px 25px 25px 70px;
+				@media screen and (max-width: 769px) {
+					padding-left: 40px;
+				}
+			}
+		}
+
+		h2.faq-title {
+			max-width: 950px;
+			color: #333333;
+			margin: 55px auto 30px;
+			font-family: Lato;
+			font-size: 36px;
+			font-weight: bold;
+			letter-spacing: 2px;
+			@media screen and (max-width: 576px) {
+				font-size: 28px;
+				letter-spacing: 2px;
+			}
+		}
+	}
+
+	.row {
+		position: relative;
+	}
+
+	.breadcrumbs {
+		height: auto;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		background: rgba(0, 0, 0, 0.5);
+		color: #c4c4c4;
+		font-family: Noto Sans;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 53px;
+		letter-spacing: 0.05em;
+		padding: 0 19px;
+
+		& a {
+			color: #fff;
+		}
+
+		@media screen and (max-width: 576px) {
+			display: none;
+		}
+	}
+
+	@media screen and (max-width: 1340px) and (min-width: 1200px) {
+		.col-xl-4 {
+			flex: 0 0 41.66666%;
+			max-width: 41.66666%;
+		}
+
+		.col-xl-8 {
+			flex: 0 0 58.33333%;
+			max-width: 58.33333%;
+		}
+	}
+
+	h2 {
+		letter-spacing: 4px;
+	}
+
+	.page-content {
+		margin-top: 55px;
+
+		h4 {
+			letter-spacing: 2px;
+			margin-bottom: 30px;
+		}
+
+		p {
+			max-width: 900px;
+			line-height: 2rem;
+			font-size: 14px;
+			letter-spacing: 0.7px;
+			margin-bottom: 2rem;
+
+			img {
+				margin-top: 60px;
+				max-width: 100%;
+				width: auto;
+				height: auto;
+			}
+
+			&:last-child {
+				margin-bottom: 100px;
+				@media screen and (max-width: 992px) {
+					margin-bottom: 2rem;
+				}
+			}
+		}
+	}
+}
+

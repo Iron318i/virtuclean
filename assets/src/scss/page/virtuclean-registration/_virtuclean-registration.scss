@@ -1,0 +1,189 @@
+.registration-virtuclean{
+  .registration-content{
+    background: #fff;
+    padding-top: 78px;
+    padding-bottom: 140px;
+    @media screen and (max-width: 768px){
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    .reg_box{
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    p{
+      font-style: normal;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 37px;
+      letter-spacing: 0.05em;
+      color: #333333;
+      margin-bottom: 16px;
+      margin-top: 50px;
+      text-align: center;
+      @media screen and (max-width: 575px){
+        font-size: 16px;
+      }
+    }
+    form{
+      .wpcf7-response-output{
+        border: none;
+        padding-left: 0;
+        font-style: normal;
+        font-size: 12px;
+        line-height: 37px;
+        letter-spacing: 0.05em;
+        padding: 0;
+        margin-top: 10px;
+      }
+      .inner {
+        padding: 0px;
+        @media screen and (max-width: 575px){
+          padding: 16px 25px 20px;
+        }
+        @media screen and (max-width: 425px){
+          padding: 16px 25px 20px;
+        }
+        input {
+          width: 100%;
+          font-family: Noto Sans;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 37px;
+          letter-spacing: 0.05em;
+          color: #333333;
+          border-bottom: 2px solid #EAEAEA;
+          &:focus{
+            border-bottom: 2px solid #7EDAEE;
+          }
+        }
+        input[type='number'] {
+          -moz-appearance: textfield;
+        }
+        .form-group {
+          position:relative;
+          & + .form-group {
+            margin-top: 15px;
+          }
+        }
+        .form-label {
+          font-family: 'Noto Sans',sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 37px;
+          letter-spacing: 0.05em;
+          color: #333333;
+          position: absolute;
+          left: 0;
+          top: 25px;
+          z-index: 10;
+          transition: transform 150ms ease-out, font-size 150ms ease-out;
+          user-select: unset;
+          cursor: pointer;
+          @media screen and (max-width: 575px){
+            font-size: 12px;
+          }
+          @media screen and (max-width: 360px){
+            font-size: 11px;
+          }
+
+        }
+        .focused .form-label {
+          transform: translateY(-75%);
+          font-size: .75em;
+          color: #888;
+        }
+        .focused_import .form-label {
+          transform: translateY(-75%);
+          font-size: .75em;
+          color: #888;
+          @media screen and (max-width: 575px){
+            font-size: 12px;
+          }
+          @media screen and (max-width: 360px){
+            font-size: 11px;
+          }
+        }
+        .inputfile + label * {
+          pointer-events: none;
+        }
+        .input_file {
+          width: 0.1px;
+          height: 0.1px;
+          opacity: 0;
+          overflow: hidden;
+          position: absolute;
+          z-index: -1;
+        }
+        .custom_btn_download{
+          cursor: pointer;
+          margin-top: 10px;
+          font-family: 'Noto Sans',sans-serif;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          line-height: 37px;
+          letter-spacing: 0.05em;
+          color: #333333;
+          @media screen and (max-width: 575px){
+            font-size: 12px;
+            line-height: 12px;
+          }
+          @media screen and (max-width: 360px){
+            font-size: 11px;
+          }
+          i{
+            color: #7edaee;
+          }
+        }
+        .form-input {
+          position: relative;
+          padding: 12px 0px 5px 0;
+          width: 100%;
+          outline: 0;
+          border: 0;
+          box-shadow: 0 1px 0 0 #e5e5e5;
+          transition: box-shadow 150ms ease-out;
+
+          &:focus {
+            box-shadow: 0 2px 0 0 blue;
+          }
+        }
+        .form-input.filled {
+          box-shadow: 0 2px 0 0 lightgreen;
+        }
+      }
+      .send {
+        height: 69px;
+        margin-top: 10px;
+        @media screen and (max-width: 575px){
+          margin: 0 24px;
+        }
+      }
+      input[type="submit"] {
+        background-color: #7EDAEE;
+        color: #fff;
+        font-family: Lato;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        width: 100%;
+        height: 69px;
+        border: none;
+        -webkit-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        transition: all .3s ease;
+        &:hover{
+          background: #33A9C4;
+        }
+      }
+    }
+  }
+
+}
